@@ -23,7 +23,8 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  ignorePatterns: ['build', '.*.js', '*.config.js', 'node_modules'],
+  ignorePatterns: ['node_modules', '*.config.js', 'build', 'dist'],
+  // ignorePatterns: ['node_modules', '*.config.js', 'build', 'dist', '.*.js'],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     // '@typescript-eslint/no-use-before-define': 'warn',

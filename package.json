@@ -1,15 +1,19 @@
 {
-  "name": "glibpack",
+  "name": "glibs",
   "version": "1.0.0",
   "repository": "https://github.com/gloriaJun/gloria-libs",
   "private": true,
   "workspaces": [
-    "packages/**"
+    "packages/react/*",
+    "packages/utility/*"
   ],
   "scripts": {
-    "preinstall": "lerna clean -y",
     "postinstall": "lerna bootstrap",
-    "build": "lerna run build"
+    "prebootstrap": "lerna clean -y",
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start",
+    "build": "lerna run build",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

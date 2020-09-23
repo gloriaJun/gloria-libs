@@ -1,5 +1,5 @@
 {
-  "name": "@glibpack/utility",
+  "name": "@glibs/utility-logger",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "gloriaJun <pureainu@gmail.com>",
@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "watch": "tsc -p tsconfig.json --watch"
+    "watch": "tsc -p tsconfig.json --watch",
+    "test": "jest"
   },
   "devDependencies": {
     "typescript": "^4.0.3"

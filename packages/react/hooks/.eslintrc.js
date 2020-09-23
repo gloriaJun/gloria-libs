@@ -1,4 +1,4 @@
-const config = require('../../.eslintrc');
+const config = require('../../config-shared/.eslintrc.base.js');
 
 module.exports = {
   ...config,
