@@ -1,5 +1,5 @@
 {
-  "name": "gloria-libs",
+  "name": "glibpack",
   "version": "1.0.0",
   "repository": "https://github.com/gloriaJun/gloria-libs",
   "private": true,
@@ -7,12 +7,16 @@
     "packages/*"
   ],
   "scripts": {
+    "preinstall": "lerna clean -y",
     "postinstall": "lerna bootstrap",
     "build": "lerna run build"
   },
   "devDependencies": {
+    "eslint": "^7.9.0",
     "husky": "^4.3.0",
     "lerna": "^3.22.1",
-    "lint-staged": "^10.4.0"
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
   }
 }
