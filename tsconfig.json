@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     // "paths": {
-    //   "@your-project-name/*": ["./*/src"]
+    //   "@glibs/*": ["./*/src"]
     // },
     // "typeRoots": ["./node_modules/@types"],
 
