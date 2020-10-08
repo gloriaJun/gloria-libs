@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Meta } from '@storybook/react/types-6-0';
 
-import { Toast } from './index';
+import toast from './index';
 
 export default {
   title: 'Ui/Toast',
-  component: Toast,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta;
 
-export const basic = () => <Toast>Test</Toast>;
+export const basic = () => {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    const cnt = count + 1;
+    setCount(cnt);
+    toast(`This is the toast message - ${cnt}`);
+  };
+
+  return <button onClick={handleClick}>Click</button>;
+};
