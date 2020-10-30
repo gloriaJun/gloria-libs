@@ -22,7 +22,5 @@
     "watch": "tsc -p tsconfig.json --watch",
     "test": "jest"
   },
-  "devDependencies": {
-    "typescript": "^4.0.3"
-  }
+  "devDependencies": {}
 }
