@@ -1,8 +1,8 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react",
-    "skipLibCheck": true,
-    "resolveJsonModule": true
+    "jsx": "react"
+    // "skipLibCheck": true,
+    // "resolveJsonModule": true
   }
 }

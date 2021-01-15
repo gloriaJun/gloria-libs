@@ -1,7 +1,7 @@
 {
-  "name": "@glibs/utility-logger",
+  "name": "@glibs/utility",
   "version": "1.0.0",
-  "description": "> TODO: description",
+  "description": "my utilities",
   "author": "gloriaJun <pureainu@gmail.com>",
   "homepage": "https://github.com/gloriaJun/gloria-libs#readme",
   "license": "MIT",
@@ -18,10 +18,14 @@
     "url": "https://github.com/gloriaJun/gloria-libs/issues"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production",
     "build:doc": "typedoc",
-    "watch": "tsc -p tsconfig.json --watch",
-    "test": "jest"
+    "test": "jest --verbose --colors"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {
+    "grapheme-splitter": "^1.0.4"
+  }
 }
