@@ -1,0 +1,27 @@
+{
+  "name": "@glibs/utility-logger",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "gloriaJun <pureainu@gmail.com>",
+  "homepage": "https://github.com/gloriaJun/gloria-libs#readme",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriaJun/gloria-libs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gloriaJun/gloria-libs/issues"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:doc": "typedoc",
+    "watch": "tsc -p tsconfig.json --watch",
+    "test": "jest"
+  },
+  "devDependencies": {}
+}
