@@ -7,6 +7,12 @@
     "packages/react/*",
     "packages/utility/*"
   ],
+  "keywords": [
+    "typescript",
+    "storybook",
+    "ui-component",
+    "utility"
+  ],
   "scripts": {
     "clean": "lerna clean -y",
     "postinstall": "lerna bootstrap",
@@ -14,8 +20,9 @@
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start",
     "build": "lerna run build",
+    "build:doc": "lerna run build:doc",
     "test": "lerna run test --stream",
-    "storybook": "lerna run storybook --scope=@glibs/react-docs",
+    "storybook": "lerna run storybook --scope=@glibs/react-storybook",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx"
   },
@@ -45,6 +52,7 @@
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.2",
     "prettier": "^2.1.2",
+    "typedoc": "^0.20.14",
     "typescript": "^4.1.2"
   },
   "engines": {

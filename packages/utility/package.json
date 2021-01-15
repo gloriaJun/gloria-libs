@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "build:doc": "typedoc",
     "watch": "tsc -p tsconfig.json --watch",
     "test": "jest"
   },
