@@ -8,13 +8,14 @@
     "packages/utility/*"
   ],
   "scripts": {
+    "clean": "lerna clean -y",
     "postinstall": "lerna bootstrap",
     "prebootstrap": "lerna clean -y",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start",
     "build": "lerna run build",
-    "test": "lerna run test",
-    "storybook:react": "lerna run storybook --scope=@glibs/react-docs",
+    "test": "lerna run test --stream",
+    "storybook": "lerna run storybook --scope=@glibs/react-docs",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx"
   },
