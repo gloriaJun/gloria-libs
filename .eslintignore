@@ -1,14 +1,15 @@
-node_modules
-dist
+node_modules/
+dist/
 *.config.js
+.*rc.js
 # fixtures
 # shared-fixtures
-# coverage
+coverage/
 # __snapshots__
 
 # packages/eslint-plugin-tslint/tests
 
 ## temp - have to fix lint error
-packages/react/docs
+packages/react/storybook
 packages/react/hooks
 packages/react/ui
