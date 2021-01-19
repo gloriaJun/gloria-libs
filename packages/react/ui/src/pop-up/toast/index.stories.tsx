@@ -5,7 +5,7 @@ import { Meta } from '@storybook/react/types-6-0';
 import toast from './index';
 
 export default {
-  title: 'Ui/Toast',
+  title: 'Components/Toast',
 } as Meta;
 
 export const basic = () => {
