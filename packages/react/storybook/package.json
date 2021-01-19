@@ -1,0 +1,33 @@
+{
+  "name": "@glibs/react-storybook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 9006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-essentials": "^6.1.14",
+    "@storybook/addon-links": "^6.1.14",
+    "@storybook/node-logger": "^6.1.14",
+    "@storybook/react": "^6.1.14",
+    "react-docgen-typescript": "^1.20.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

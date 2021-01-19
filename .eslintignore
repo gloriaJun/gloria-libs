@@ -9,6 +9,6 @@ dist
 # packages/eslint-plugin-tslint/tests
 
 ## temp - have to fix lint error
-packages/react/docs
+packages/react/storybook
 packages/react/hooks
 packages/react/ui
