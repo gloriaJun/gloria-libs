@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.base.json",
   // "include": ["tests/**/*.ts", "tools/**/*.ts", ".eslintrc.js"],
-  "include": [".eslintrc.js", "packages/react/*/src", "packages/utility/src"],
+  "include": ["packages/react/*/src", "packages/utility/src"],
   "exclude": ["node_modules", "**/*.spec.ts", "*.config.js"]
 }
