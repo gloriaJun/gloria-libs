@@ -11,14 +11,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.1.14",
-    "@storybook/addon-essentials": "^6.1.14",
-    "@storybook/addon-links": "^6.1.14",
-    "@storybook/node-logger": "^6.1.14",
-    "@storybook/react": "^6.1.14",
-    "react-docgen-typescript": "^1.20.5"
-  },
+  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",
