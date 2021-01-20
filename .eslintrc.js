@@ -9,31 +9,30 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json', './packages/**/tsconfig.json'],
+    project: [
+      './tsconfig.json',
+      './packages/react/**/tsconfig.json',
+      './packages/**/tsconfig.json',
+    ],
     sourceType: 'module',
-    // tsconfigRootDir: __dirname,
-    warnOnUnsupportedTypeScriptVersion: false,
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features,
     ecmaFeatures: {
-      jsx: true,
+      // jsx: true,
     },
   },
-  plugins: ['jest'],
-  extends: [
-    'gloria-base',
-    'plugin:react/recommended',
-    'plugin:jest/recommended',
-    // 'prettier/react',
-    'plugin:jest/recommended',
-  ],
+  plugins: [],
+  extends: ['gloria-base'],
   settings: {},
   rules: {},
-  ignorePatterns: ['node_modules', '*.config.js', '.*rc.js', 'dist'],
   overrides: [
     {
       files: ['./packages/react/**/*.tsx'],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       plugins: ['react', 'react-hooks'],
-      extends: ['plugin:react/recommended'],
+      extends: ['plugin:react/recommended', 'prettier/react'],
       settings: {
         react: {
           version: 'detect',
@@ -41,14 +40,21 @@ module.exports = {
       },
       rules: {},
     },
+    /** test files */
+    {
+      files: ['./packages/**/*.spec.tsx'],
+      plugins: ['jest'],
+      extends: ['plugin:jest/recommended'],
+      settings: {},
+      rules: {},
+    },
   ],
   ignorePatterns: [
     'node_modules',
+    'dist',
+    'coverage',
     '*.config.js',
     '.*rc.js',
-    '*.stories.tsx',
-    // '*.stories.(js|jsx|ts|tsx)',
-    'coverage',
-    'dist',
+    '*.stories.*',
   ],
 };
