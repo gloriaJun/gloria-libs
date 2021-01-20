@@ -15,6 +15,7 @@ module.exports = {
       './packages/**/tsconfig.json',
     ],
     sourceType: 'module',
+    ecmaVersion: 2018,
     ecmaFeatures: {
       // jsx: true,
     },
@@ -48,13 +49,46 @@ module.exports = {
       settings: {},
       rules: {},
     },
-  ],
-  ignorePatterns: [
-    'node_modules',
-    'dist',
-    'coverage',
-    '*.config.js',
-    '.*rc.js',
-    '*.stories.*',
+    /** story files */
+    {
+      files: ['./packages/react/**/*.stories.tsx'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'error',
+          { packageDir: [`./`, `./packages/react/ui`] },
+        ],
+        'import/no-internal-modules': [
+          'error',
+          {
+            allow: ['@storybook/**'],
+          },
+        ],
+        'import/order': [
+          'error',
+          {
+            groups: [
+              'builtin',
+              'external',
+              'internal',
+              'parent',
+              ['sibling', 'index'],
+            ],
+            pathGroups: [
+              {
+                pattern: '@storybook/**',
+                group: 'external',
+                position: 'after',
+              },
+            ],
+            pathGroupsExcludedImportTypes: ['@storybook/**'],
+            'newlines-between': 'always',
+            alphabetize: {
+              caseInsensitive: true,
+              order: 'asc',
+            },
+          },
+        ],
+      },
+    },
   ],
 };
