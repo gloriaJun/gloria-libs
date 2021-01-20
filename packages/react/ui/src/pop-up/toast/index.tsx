@@ -71,7 +71,7 @@ function mount(props: IToastContentProps): void {
   }
 }
 
-export default function toast(message: string): void {
+export const toast = (message: string): void => {
   const props = Object.assign(
     typeof message === 'string' ? { message } : message,
     {
@@ -80,4 +80,4 @@ export default function toast(message: string): void {
   );
 
   mount(props);
-}
+};

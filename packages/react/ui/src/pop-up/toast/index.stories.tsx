@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 import { Meta } from '@storybook/react/types-6-0';
 
-import toast from '.';
+import { toast } from '.';
+
+const test = () => 'hello';
+
+test();
 
 export default {
   title: 'Components/Toast',
@@ -13,6 +17,7 @@ export const basic = () => {
 
   const handleClick = () => {
     const cnt = count + 1;
+
     setCount(cnt);
     toast(`This is the toast message - ${cnt}`);
   };

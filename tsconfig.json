@@ -73,5 +73,12 @@
     // "noImplicityAny": true
   },
   "include": ["packages/react/*/src", "packages/utility/src", ".eslintrc.js"],
-  "exclude": ["node_modules", "dis", "coverage", ".*rc.js", "*.config.js"]
+  "exclude": [
+    "node_modules",
+    "dis",
+    "coverage",
+    ".*rc.js",
+    "*.config.js",
+    "packages/react/storybook"
+  ]
 }
