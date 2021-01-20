@@ -4,10 +4,6 @@ import { Meta } from '@storybook/react/types-6-0';
 
 import { toast } from '.';
 
-const test = () => 'hello';
-
-test();
-
 export default {
   title: 'Components/Toast',
 } as Meta;

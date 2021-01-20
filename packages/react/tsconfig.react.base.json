@@ -2,8 +2,8 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "allowJs": true,
-    "jsx": "react"
-    // "skipLibCheck": true,
-    // "resolveJsonModule": true
+    "jsx": "react",
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   }
 }

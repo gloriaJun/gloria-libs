@@ -15,10 +15,6 @@ module.exports = {
       './packages/**/tsconfig.json',
     ],
     sourceType: 'module',
-    ecmaVersion: 2018,
-    ecmaFeatures: {
-      // jsx: true,
-    },
   },
   plugins: [],
   extends: ['gloria-base'],
@@ -39,7 +35,10 @@ module.exports = {
           version: 'detect',
         },
       },
-      rules: {},
+      rules: {
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+      },
     },
     /** test files */
     {
