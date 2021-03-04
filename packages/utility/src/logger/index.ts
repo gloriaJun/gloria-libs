@@ -1,3 +1,1 @@
-export default function logger(message: string): void {
-  console.log(message);
-}
+export * from './logger';
