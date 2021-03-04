@@ -23,8 +23,9 @@
     "test": "lerna run test --stream",
     "test:util": "lerna --scope=@glibs/utility exec -- yarn run test",
     "storybook:react": "lerna run storybook --scope=@glibs/react-storybook",
+    "prelint": "tsc --noEmit",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx"
+    "lint:fix": "$npm_execpath run lint -- --fix"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

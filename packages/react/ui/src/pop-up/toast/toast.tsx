@@ -10,7 +10,7 @@ export interface IToastContentProps {
 export interface IToastProps {
   toastList: Array<IToastContentProps>;
   duration?: number;
-  removeToast: () => void;
+  removeToast: (id: string) => void;
 }
 
 export default function Toast({ toastList, duration, ...props }: IToastProps) {
