@@ -1,10 +1,10 @@
 {
   // https://github.com/typescript-eslint/typescript-eslint/blob/master/tsconfig.base.json
   "compilerOptions": {
-    "baseUrl": "./packages",
-    // "paths": {
-    //   "@glibs/*": ["./*/src"]
-    // },
+    "baseUrl": ".",
+    "paths": {
+      "@glibs/utility": ["./packages/utility/src"]
+    },
     "typeRoots": ["./node_modules/@types", "./packages/@types"],
 
     /* Basic Options */
@@ -76,6 +76,7 @@
     "packages/@types",
     "packages/react/*/src",
     "packages/utility/src",
+    "packages/logger/src",
     ".eslintrc.js"
   ],
   "exclude": [
