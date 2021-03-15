@@ -6,6 +6,9 @@ module.exports = {
   },
   verbose: true,
   testRegex: ['((\\.|/)(test|spec))\\.([tj]sx?)$'],
+  moduleNameMapper: {
+    '@glibs/(.*)$': '<rootDir>/../$1/src',
+  },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   //   testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
   // Gatsby includes un-transpiled ES6 code. Exclude the gatsby module.

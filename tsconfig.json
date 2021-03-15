@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@glibs/utility": ["./packages/utility/src"]
+      "@glibs/*": ["./packages/*/src"]
     },
     "typeRoots": ["./node_modules/@types", "./packages/@types"],
 
