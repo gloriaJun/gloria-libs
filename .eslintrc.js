@@ -18,7 +18,11 @@ module.exports = {
   },
   plugins: [],
   extends: ['gloria-base'],
-  settings: {},
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+  },
   rules: {},
   overrides: [
     {

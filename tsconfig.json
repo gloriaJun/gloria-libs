@@ -1,11 +1,11 @@
 {
   // https://github.com/typescript-eslint/typescript-eslint/blob/master/tsconfig.base.json
   "compilerOptions": {
-    "baseUrl": "./packages",
-    // "paths": {
-    //   "@glibs/*": ["./*/src"]
-    // },
-    // "typeRoots": ["./node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "@glibs/*": ["./packages/*/src"]
+    },
+    "typeRoots": ["./node_modules/@types", "./packages/@types"],
 
     /* Basic Options */
     // "incremental": true,                   /* Enable incremental compilation */
@@ -72,7 +72,13 @@
     // "resolveJsonModule": true
     // "noImplicityAny": true
   },
-  "include": ["packages/react/*/src", "packages/utility/src", ".eslintrc.js"],
+  "include": [
+    "packages/@types",
+    "packages/react/*/src",
+    "packages/utility/src",
+    "packages/logger/src",
+    ".eslintrc.js"
+  ],
   "exclude": [
     "node_modules",
     "dis",
