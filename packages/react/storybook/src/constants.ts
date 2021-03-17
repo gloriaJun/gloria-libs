@@ -1,4 +1,5 @@
-const rootCategory = {
+export const rootCategory = {
+  intro: 'Intro',
   components: 'Components',
   hooks: 'Hooks',
 } as const;

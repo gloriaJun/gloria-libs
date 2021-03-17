@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 
 import { Meta } from '@storybook/react/types-6-0';
 
+import { componentsCategory } from '@glibs/react-storybook';
+
 import { toast } from '.';
 
 export default {
-  title: 'Components/Toast',
+  title: `${componentsCategory.organisms}/Toast`,
 } as Meta;
 
 export const basic = () => {
