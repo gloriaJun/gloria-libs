@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "storybook:build": "build-storybook -s public",
+    "storybook:deploy": "storybook-to-ghpages"
   },
   "dependencies": {
     "react": "^17.0.1",
