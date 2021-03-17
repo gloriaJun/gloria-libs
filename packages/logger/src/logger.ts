@@ -1,4 +1,4 @@
-import { ObjectUtility } from '@glibs/utility';
+import { hasKey, findKey } from '@glibs/utility';
 
 const LOG_LEVEL = {
   trace: 1,
@@ -18,21 +18,19 @@ export class Logger {
 
   constructor(level?: ILevelKeys) {
     this.currentLogLevel =
-      level && ObjectUtility.hasKey(LOG_LEVEL, level)
-        ? LOG_LEVEL[level]
-        : this.defaultLevel;
+      level && hasKey(LOG_LEVEL, level) ? LOG_LEVEL[level] : this.defaultLevel;
   }
 
   private log = (level: ILevelValues, ...args: ILogArgs): void => {
     if (this.currentLogLevel <= level) {
       console.log('### will be logging', this.currentLogLevel, level);
-      const key = <ILevelKeys>ObjectUtility.findKey(LOG_LEVEL, level);
+      const key = <ILevelKeys>findKey(LOG_LEVEL, level);
       console[key](...args);
     }
   };
 
   getCurrentLogLevel = () => {
-    return ObjectUtility.findKey(LOG_LEVEL, this.currentLogLevel);
+    return findKey(LOG_LEVEL, this.currentLogLevel);
   };
 
   trace = (...args: ILogArgs) => {

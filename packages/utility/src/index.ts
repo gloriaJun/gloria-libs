@@ -1,6 +1,7 @@
 // Utility functions
-export * as ImageUtility from './image';
-export * as NumberUtility from './number';
-export * as ObjectUtility from './object';
-export * as StringUtility from './string';
-export * as ValidatorUtility from './validator';
+export * from './image';
+export * from './number';
+export * from './object';
+export * from './string';
+export * from './uuid';
+export * from './validator';
