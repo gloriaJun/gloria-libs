@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { uuid } from '@glibs/utility';
+
 import Toast, { IToastContentProps } from './toast';
 
 const maxToastCount = 3;
 const queue: IToastContentProps[] = [];
 let containerDomNode: HTMLElement;
-
-function uuid(): string {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    const r = (Math.random() * 16) | 0,
-      v = c == 'x' ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
-}
 
 /**
  * Check whether container is currently mounted in the DOM
