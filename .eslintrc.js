@@ -66,6 +66,7 @@ module.exports = {
             allow: ['@storybook/**'],
           },
         ],
+        'import/exports-last': 'off',
         'import/order': [
           'error',
           {

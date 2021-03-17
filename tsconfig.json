@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@glibs/*": ["./packages/*/src"]
+      "@glibs/*": ["./packages/*/src"],
+      "@glibs/react-*": ["./packages/react/*/src"]
     },
     "typeRoots": ["./node_modules/@types", "./packages/@types"],
 
@@ -79,12 +80,5 @@
     "packages/logger/src",
     ".eslintrc.js"
   ],
-  "exclude": [
-    "node_modules",
-    "dis",
-    "coverage",
-    ".*rc.js",
-    "*.config.js",
-    "packages/react/storybook"
-  ]
+  "exclude": ["node_modules", "dis", "coverage", ".*rc.js", "*.config.js"]
 }

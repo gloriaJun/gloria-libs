@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+UI Component based on Atomic Design Pattern
+
+- atoms : Atom은 더 이상 쪼갤 수 없는 단위에 해당하는 요소에 해당한다. 혹은 애니메이션, 폰트, 색상 등과 같이 요소가 아닌 속성도 포함
+- molecules
+  - 여러 개의 Atom이 모여 만들어진 목적이 있는 하나의 컴포넌트
+  - 데이터를 표시하고 이벤트를 받을 수 있지만 “하나의 역할”만을 가진다.
+- organism
+  - 사용자에게 의미 있는 정보를 제공하거나 인터렉션 할 수 있는 UI를 제공하는 등 서비스로서 의미를 가지는 인터페이스
+  - 사용자에게 의미를 가지는 기능적 요구사항에 포함되는 경우에 해당되는 컴포넌트다.
 
 ## Available Scripts
 

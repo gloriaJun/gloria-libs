@@ -1,6 +1,7 @@
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-const resolve = (dir) => path.resolve(__dirname, `../../${dir}`);
+const resolve = (dir) => path.resolve(process.cwd(), `..`, dir);
 
 module.exports = {
   stories: [resolve(`ui/**/*.stories.@(js|jsx|ts|tsx|mdx)`)],
@@ -15,6 +16,7 @@ module.exports = {
     },
   },
   webpackFinal: async (config) => {
+    config.resolve.plugins.push(new TsconfigPathsPlugin({}));
     return config;
   },
 };
