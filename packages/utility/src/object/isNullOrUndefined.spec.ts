@@ -1,9 +1,9 @@
-import { isNullOrUndefined } from './isNullOrUndefined';
+import { isNull, isUndefined, isNullOrUndefined } from './isNullOrUndefined';
 
 describe('isNullOrUndefined', () => {
   describe('should be return true if input is null', () => {
-    it(`isNullOrUndefined(null) === true`, () => {
-      expect(isNullOrUndefined(null)).toBe(true);
+    it(`isNull(null) === true`, () => {
+      expect(isNull(null)).toBe(true);
     });
 
     // it(`isNullOrUndefined('null') === true`, () => {
@@ -12,8 +12,8 @@ describe('isNullOrUndefined', () => {
   });
 
   describe('should be return true if input is undefined', () => {
-    it(`isNullOrUndefined(undefined) === true`, () => {
-      expect(isNullOrUndefined(undefined)).toBe(true);
+    it(`isUndefined(undefined) === true`, () => {
+      expect(isUndefined(undefined)).toBe(true);
     });
 
     // it(`isNullOrUndefined('undefined') === true`, () => {

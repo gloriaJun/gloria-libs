@@ -1,7 +1,6 @@
-// Utility functions
+export * from './boolean';
 export * from './image';
 export * from './number';
 export * from './object';
 export * from './string';
-export * from './uuid';
-export * from './validator';
+export * from './util';

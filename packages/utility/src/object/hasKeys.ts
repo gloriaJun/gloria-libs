@@ -1,6 +1,7 @@
-import { isObject } from '../validator';
+import { isObject } from './isObject';
+import { isString } from './isString';
 
-type IObjectType<T> = GeneralObject<T> | Array<T> | null;
+type IObjectType<T> = Record<string, T> | Array<T> | null;
 type IKeyType = undefined | string;
 type IKeysType = IKeyType | string[];
 
@@ -17,7 +18,7 @@ const hasKeys = <T>(
   return (
     isObject(obj) &&
     key &&
-    (typeof key === 'string' ? [key] : key)[method]((k) => {
+    (isString(key) ? [key] : key)[method]((k) => {
       return Object.prototype.hasOwnProperty.call(obj, k);
     })
   );

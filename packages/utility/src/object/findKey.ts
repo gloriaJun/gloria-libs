@@ -1,4 +1,4 @@
-type IObjectType<T> = GeneralObject<T> | null;
+type IObjectType<T> = Record<string, T> | null;
 
 export const findKey = <T>(obj: IObjectType<T>, value?: T) => {
   let result = null;

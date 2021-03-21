@@ -1,4 +1,4 @@
-import { isNumber } from './isNumber';
+import { isNumber } from '../object';
 
 export const isFormatNumber = (val?: unknown) => {
   let parseVal = val;
