@@ -1,7 +1,9 @@
+import { isBoolean } from '../object/isBoolean';
+
 export const isTrue = (val: unknown) => {
-  return typeof val === 'boolean' ? val : val === 'true';
+  return isBoolean(val) ? val : val === 'true';
 };
 
 export const isFalse = (val: unknown) => {
-  return typeof val === 'boolean' ? !val : val === 'false';
+  return isBoolean(val) ? !val : val === 'false';
 };
