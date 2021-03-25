@@ -6,16 +6,16 @@ describe('isEmpty', () => {
       expect(isEmpty(null)).toBe(true);
     });
 
-    it(`isEmpty('')`, () => {
-      expect(isEmpty('')).toBe(true);
-    });
-
     it(`isEmpty([])`, () => {
-      expect(isEmpty('')).toBe(true);
+      expect(isEmpty([])).toBe(true);
     });
 
     it(`isEmpty({})`, () => {
       expect(isEmpty({})).toBe(true);
+    });
+
+    it(`isEmpty('')`, () => {
+      expect(isEmpty('')).toBe(true);
     });
   });
 

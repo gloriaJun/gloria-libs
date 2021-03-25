@@ -44,6 +44,12 @@ module.exports = {
         '@typescript-eslint/no-unsafe-member-access': 'off',
       },
     },
+    {
+      files: ['./packages/utility/**/*.ts'],
+      rules: {
+        'import/no-internal-modules': ['off'],
+      },
+    },
     /** test files */
     {
       files: ['./packages/**/*.spec.tsx'],
