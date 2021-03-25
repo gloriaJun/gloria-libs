@@ -25,13 +25,15 @@ module.exports = {
   },
   rules: {},
   overrides: [
-      /** webpack files */
-      {
-        files: ['./config/webpack.config.*'],
-        rules: {
-          'import/no-extraneous-dependencies': 'off',
-        },
+    /** webpack files */
+    {
+      files: ['./config/webpack.config.*', 'webpack.config.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+        'import/no-internal-modules': 'off',
+        '@typescript-eslint/ban-ts-comment': 'warn',
       },
+    },
     {
       files: ['./packages/react/**/*.tsx'],
       parserOptions: {

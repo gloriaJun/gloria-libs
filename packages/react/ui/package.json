@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "prebuild": "yarn run build:css",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
+    "build": "webpack",
     "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
   },
   "browserslist": {
@@ -25,11 +24,9 @@
     "@glibs/react-storybook": "*",
     "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.0.2",
-    "twin.macro": "^2.0.8"
+    "tailwindcss": "^2.0.4",
+    "twin.macro": "^2.3.1"
   },
   "dependencies": {
     "@glibs/utility": "*",
