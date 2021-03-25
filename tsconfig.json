@@ -80,5 +80,12 @@
     "packages/logger/src",
     ".eslintrc.js"
   ],
-  "exclude": ["node_modules", "dis", "coverage", ".*rc.js", "*.config.js"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "config",
+    ".*rc.js",
+    "*.config.js"
+  ]
 }
