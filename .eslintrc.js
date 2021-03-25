@@ -25,6 +25,13 @@ module.exports = {
   },
   rules: {},
   overrides: [
+      /** webpack files */
+      {
+        files: ['./config/webpack.config.*'],
+        rules: {
+          'import/no-extraneous-dependencies': 'off',
+        },
+      },
     {
       files: ['./packages/react/**/*.tsx'],
       parserOptions: {

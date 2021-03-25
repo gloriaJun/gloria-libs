@@ -69,23 +69,11 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
     // "resolveJsonModule": true
     // "noImplicityAny": true
+    "skipLibCheck": true
   },
-  "include": [
-    "packages/@types",
-    "packages/react/*/src",
-    "packages/utility/src",
-    "packages/logger/src",
-    ".eslintrc.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "coverage",
-    "config",
-    ".*rc.js",
-    "*.config.js"
-  ]
+  "include": ["config", "packages", ".eslintrc.js", "babel.config.js"],
+  "exclude": ["node_modules", "dist", "coverage", ".*rc.js", "*.config.js"]
 }

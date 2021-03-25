@@ -1,22 +1,21 @@
-module.exports = (api) => {
-  api.cache(true);
-
-  return {
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          targets: {
-            browsers: ['last 2 versions', 'ie >= 11'],
-          },
-          useBuiltIns: 'usage',
-          corejs: 3,
-          shippedProposals: true,
-          modules: 'commonjs',
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          // node: 'current',
+          browsers: ['last 2 versions', 'ie >= 11'],
         },
-      ],
-      '@babel/preset-typescript',
+        // modules: 'commonjs',
+        modules: false, // to treeshaking
+        useBuiltIns: 'usage',
+        corejs: 3,
+        shippedProposals: true,
+      },
     ],
-    plugins: [],
-  };
+    '@babel/preset-react', // if you use react
+    '@babel/preset-typescript',
+  ],
+  plugins: [],
 };
