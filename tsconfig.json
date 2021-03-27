@@ -74,6 +74,14 @@
     // "noImplicityAny": true
     "skipLibCheck": true
   },
-  "include": ["config", "packages", ".eslintrc.js", "babel.config.js"],
+  "include": [
+    "config",
+    "./packages/**/*"
+    // "packages/@types",
+    // "packages/react/*/src",
+    // "packages/utility/src",
+    // "packages/logger/src",
+    // ".eslintrc.js"
+  ],
   "exclude": ["node_modules", "dist", "coverage", ".*rc.js", "*.config.js"]
 }
