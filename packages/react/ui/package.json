@@ -22,18 +22,16 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@glibs/react-storybook": "*",
     "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.0.2",
-    "twin.macro": "^2.0.8"
+    "@glibs/react-storybook": "*",
+    "postcss-cli": "^8.3.1"
   },
   "dependencies": {
     "@glibs/utility": "*",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "tailwindcss": "^2.0.2",
+    "twin.macro": "^2.0.8"
   }
 }
