@@ -5,7 +5,8 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   verbose: true,
-  testRegex: ['((\\.|/)(test|spec))\\.([tj]sx?)$'],
+  // testRegex: ['((\\.|/)(test|spec))\\.([tj]sx?)$'],
+  testRegex: ['((\\.|/)(test))\\.([tj]sx?)$'],
   moduleNameMapper: {
     '@glibs/(.*)$': '<rootDir>/../$1/src',
   },
