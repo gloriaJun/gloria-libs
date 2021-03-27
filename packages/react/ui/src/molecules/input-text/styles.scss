@@ -1,0 +1,100 @@
+@import '../assets/styles/utils';
+
+$focusColor: $oc-blue-5;
+$errorColor: $oc-red-7;
+
+@mixin boxBorder($radius: 3px) {
+  border-radius: $radius;
+  border: 1px solid $oc-gray-4;
+}
+@mixin changeColor($color, $borderSize: 1px) {
+  label,
+  span.icon {
+    color: $color;
+  }
+  input {
+    border: $borderSize solid $color;
+  }
+}
+
+.gr-text-input {
+  position: relative;
+  margin-top: 1.2rem;
+  margin-bottom: 2.7rem;
+
+  &.is-required label:after {
+    content: '*';
+    font-weight: normal;
+    color: $oc-red-6;
+    margin-left: 0.2rem;
+  }
+
+  label {
+    display: block;
+    padding-bottom: 0.2rem;
+    padding-left: 0.2rem;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: $oc-gray-7;
+    position: absolute;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  input {
+    padding: 0.5rem 0.7rem;
+    width: 100%;
+    @include boxBorder;
+    box-shadow: inset 0 1px 2px hsla(0, 0%, 4%, 0.1);
+    color: $oc-gray-8;
+    font-size: 0.9rem;
+    position: relative;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+
+  .helper-text {
+    position: absolute;
+    color: $oc-gray-6;
+    font-size: 0.8rem;
+    display: block;
+    padding-top: 0.3rem;
+    padding-left: 0.2rem;
+  }
+
+  /** with icon **/
+  &.has-icon {
+    input {
+      padding-left: 2.3rem;
+    }
+    span.icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      color: $oc-gray-6;
+      padding: 0 0.2rem;
+    }
+  }
+
+  /** focus **/
+  &.focus {
+    @include changeColor($focusColor);
+  }
+
+  /** error **/
+  &.error {
+    @include changeColor($errorColor, 2px);
+    input {
+      background-color: $oc-red-1;
+      color: $oc-red-9;
+    }
+  }
+}
