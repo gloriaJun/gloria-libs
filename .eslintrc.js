@@ -52,11 +52,17 @@ module.exports = {
     },
     /** test files */
     {
-      files: ['./packages/**/*.spec.tsx'],
+      files: [
+        './packages/**/*.test.tsx',
+        './packages/**/*.test.ts',
+        './packages/**/*.spec.ts',
+      ],
       plugins: ['jest'],
       extends: ['plugin:jest/recommended'],
       settings: {},
-      rules: {},
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
     },
     /** story files */
     {
