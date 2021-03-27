@@ -74,11 +74,12 @@
     // "noImplicityAny": true
   },
   "include": [
-    "packages/@types",
-    "packages/react/*/src",
-    "packages/utility/src",
-    "packages/logger/src",
-    ".eslintrc.js"
+    "./packages/**/*"
+    // "packages/@types",
+    // "packages/react/*/src",
+    // "packages/utility/src",
+    // "packages/logger/src",
+    // ".eslintrc.js"
   ],
   "exclude": ["node_modules", "dis", "coverage", ".*rc.js", "*.config.js"]
 }
