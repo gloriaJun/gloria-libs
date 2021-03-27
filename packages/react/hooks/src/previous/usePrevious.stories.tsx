@@ -1,39 +1,38 @@
-// import React, { useCallback, useState } from 'react';
-// import { Meta } from '@storybook/react/types-6-0';
+import React, { useCallback, useState } from 'react';
 
-// // import { rootStoryCategory } from '@story-utils/constants';
-// // import { MainContainer } from '@components-common/template/container';
-// // import { Button } from '@components-common/atoms/button';
-// import { usePrevious } from './usePrevious';
+import { Meta } from '@storybook/react/types-6-0';
 
-// export default {
-//   // title: `${rootStoryCategory.hooks}/usePrevious`,
-//   title: `usePrevious`,
-//   // component: useScrollPosition,
-//   parameters: {},
-//   argTypes: {},
-// } as Meta;
+import { rootCategory } from '@glibs/react-storybook';
 
-// export const Default = () => {
-//   const [number, SetNumber] = useState(0);
-//   const prevNumber = usePrevious(number);
+import { usePrevious } from './usePrevious';
 
-//   const handleIncrement = useCallback(() => {
-//     SetNumber((v) => ++v);
-//   }, [SetNumber]);
+export default {
+  title: `${rootCategory.hooks}/usePrevious`,
+  // component: useScrollPosition,
+  parameters: {},
+  argTypes: {},
+} as Meta;
 
-//   const handleDecrement = useCallback(() => {
-//     SetNumber((v) => --v);
-//   }, [SetNumber]);
+export const Default = () => {
+  const [number, SetNumber] = useState(0);
+  const prevNumber = usePrevious(number);
 
-//   return (
-//     <MainContainer>
-//       <p>Current Value: {number}</p>
-//       <p>Previous Value: {prevNumber}</p>
+  const handleIncrement = useCallback(() => {
+    SetNumber((v) => ++v);
+  }, [SetNumber]);
 
-//       <br />
-//       <Button onClick={handleIncrement}>Increment (+1)</Button>
-//       <Button onClick={handleDecrement}>Decrement (-1)</Button>
-//     </MainContainer>
-//   );
-// };
+  const handleDecrement = useCallback(() => {
+    SetNumber((v) => --v);
+  }, [SetNumber]);
+
+  return (
+    <main>
+      <p>Current Value: {number}</p>
+      <p>Previous Value: {prevNumber}</p>
+
+      <br />
+      <button onClick={handleIncrement}>Increment (+1)</button>
+      <button onClick={handleDecrement}>Decrement (-1)</button>
+    </main>
+  );
+};
